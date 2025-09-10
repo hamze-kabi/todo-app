@@ -15,6 +15,7 @@
       />
     </main>
     <AppFooter />
+    <count />
   </div>
 </template>
 
@@ -25,12 +26,12 @@ import AppHeader from './AppHeader.vue'
 import AppFooter from './AppFooter.vue'
 import TodoList from './TodoList.vue'
 import FilterTasks from './FilterTasks.vue'
-
+import count from './count.vue'
 // list of all tasks, active or completed
 const allTasks = ref([])
 
 // creates index number
-const count = ref(0)
+// const count = ref(0)
 
 // gets received from FilterTasks.vue and sent to TodoList.vue and then TodoItem.vue
 const showCompleted = ref(false)
