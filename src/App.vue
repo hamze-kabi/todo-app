@@ -1,7 +1,4 @@
-<script setup></script>
-
 <template>
-<<<<<<< HEAD
   <!-- a div with to with screen width and height -->
   <div class="flex flex-col justify-center items-center h-screen w-screen">
     <!-- header comp -->
@@ -18,7 +15,6 @@
       />
     </main>
     <AppFooter />
-    <count />
   </div>
 </template>
 
@@ -29,12 +25,12 @@ import AppHeader from './AppHeader.vue'
 import AppFooter from './AppFooter.vue'
 import TodoList from './TodoList.vue'
 import FilterTasks from './FilterTasks.vue'
-import count from './count.vue'
+
 // list of all tasks, active or completed
 const allTasks = ref([])
 
 // creates index number
-// const count = ref(0)
+const count = ref(0)
 
 // gets received from FilterTasks.vue and sent to TodoList.vue and then TodoItem.vue
 const showCompleted = ref(false)
@@ -56,14 +52,6 @@ const deleteTaskFromArr = function (index) {
 }
 </script>
 
-=======
-  <div class="flex justify-center items-center h-screen w-screen">
-    <div id="aa" class="w-40 h-40 bg-green-500"></div>
-  </div>
-</template>
-
-<style scoped></style>
->>>>>>> parent of 0a8e395 (add several features, read description)
 <!-- 
 day night toggle
 farsi eng
