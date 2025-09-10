@@ -1,4 +1,7 @@
+<script setup></script>
+
 <template>
+<<<<<<< HEAD
   <!-- a div with to with screen width and height -->
   <div class="flex flex-col justify-center items-center h-screen w-screen">
     <!-- header comp -->
@@ -53,6 +56,14 @@ const deleteTaskFromArr = function (index) {
 }
 </script>
 
+=======
+  <div class="flex justify-center items-center h-screen w-screen">
+    <div id="aa" class="w-40 h-40 bg-green-500"></div>
+  </div>
+</template>
+
+<style scoped></style>
+>>>>>>> parent of 0a8e395 (add several features, read description)
 <!-- 
 day night toggle
 farsi eng
