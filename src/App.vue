@@ -6,7 +6,7 @@
     <div class="flex flex-col justify-center items-center h-screen w-screen">
       <!-- header comp -->
       <AppHeader />
-      <FilterTasks @showCompleted="(bool) => (showCompleted = bool)" />
+      <FilterTasks />
       <!-- main container -->
       <main class="flex flex-col justify-content items-center">
         <!-- input comp -->
@@ -22,7 +22,6 @@
   </div>
 </template>
 
-<style scoped></style>
 <script setup>
 import { ref } from 'vue'
 import inputField from './inputField.vue'
@@ -36,9 +35,6 @@ const allTasks = ref([])
 
 // creates index number
 const count = ref(0)
-
-// gets received from FilterTasks.vue and sent to TodoList.vue and then TodoItem.vue
-const showCompleted = ref(false)
 
 // adds the new task to allTasks object
 const addNewTask = function (task) {

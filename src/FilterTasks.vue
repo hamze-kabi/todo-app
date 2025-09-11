@@ -3,19 +3,20 @@
     <label for="show">Show:</label>
     <select class="border" name="show" id="show" v-model="show">
       <option value="All">All</option>
+      <option value="active">active</option>
       <option value="completed">Completed</option>
     </select>
   </div>
 </template>
 
 <script setup>
+import { useFilterStore } from './store/filter'
 import { ref, watch } from 'vue'
 
 const show = ref('All')
+const filter = useFilterStore()
 
-const emit = defineEmits(['showCompleted'])
-
-watch(show, (newVal) => {
-  newVal === 'completed' ? emit('showCompleted', true) : emit('showCompleted', false)
+watch(show, (newFilter) => {
+  filter.determineFilter(newFilter)
 })
 </script>

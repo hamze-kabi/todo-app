@@ -1,6 +1,6 @@
 <template>
   <!-- each div contains a task and its buttons -->
-  <div v-for="task in tasksArr" :key="task" class="flex gap-5">
+  <div v-for="task in tasksArr" :key="task">
     <todoItem
       :task="task"
       @complete-task-emit="(index) => completeTask(index)"
