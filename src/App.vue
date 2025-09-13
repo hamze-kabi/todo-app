@@ -1,14 +1,15 @@
-<script setup></script>
-
 <template>
-  <div class="flex justify-center items-center h-screen w-screen">
-    <!-- a div with to with screen width and height -->
-    <div class="flex flex-col justify-center items-center h-screen w-screen">
-      <!-- header comp -->
-      <AppHeader />
+  <!-- a div with width and height of screen to center the main container -->
+  <div class="flex flex-col justify-center items-center h-screen w-screen">
+    <!-- header comp -->
+    <AppHeader />
+    <!-- the main container, contains FilterTasks, inputField and todo list -->
+    <main
+      class="flex flex-col justify-center items-center gap-4 border p-4 w-70 md:w-80 lg:w-96 xl:w-[32rem]"
+    >
       <FilterTasks />
-      <!-- main container -->
-      <main class="flex flex-col justify-content items-center">
+      <!-- contains input and todolist -->
+      <section class="flex flex-col gap-2 justify-content items-center">
         <!-- input comp -->
         <inputField @new-task="(task) => addNewTask(task)" />
         <TodoList
@@ -16,9 +17,9 @@
           @delete-task-emit="(index) => deleteTaskFromArr(index)"
           @complete-task-emit="(index) => completeTask(index)"
         />
-      </main>
-      <AppFooter />
-    </div>
+      </section>
+    </main>
+    <AppFooter />
   </div>
 </template>
 

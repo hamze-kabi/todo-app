@@ -1,13 +1,13 @@
 <template>
-  <div v-show="determineVShow(task.status)" class="flex gap-5">
-    <!-- <p>task.status: {{ task.status }}</p>
-    <p>selectedFilter: {{ filter.selectedFilter }}</p>
-    <p>{{ determineVShow(task.status) }}</p> -->
-    <p :class="[task.status === 'complete' ? 'line-through' : '']">
+  <div v-show="determineVShow(task.status)" class="flex gap-2 border p-1">
+    <p
+      class="truncate w-30 md:w-40 lg:w-54 xl:w-[21rem]"
+      :class="[task.status === 'complete' ? 'line-through' : '']"
+    >
       {{ task.task }}
     </p>
-    <button @click="completeTask(task.index)">Complete</button>
-    <button @click="deleteTask(task.index)">Delete</button>
+    <button class="text-sm border p-1" @click="completeTask(task.index)">Complete</button>
+    <button class="text-sm border p-1" @click="deleteTask(task.index)">Delete</button>
   </div>
 </template>
 
@@ -26,14 +26,6 @@ const determineVShow = function (taskStatus) {
     return true
   }
   return false
-  // if (
-  //   taskStatus === 'All' ||
-  //   (taskStatus === 'complete' && filter.selectedFilter === 'completed') ||
-  //   (taskStatus === 'active' && filter.selectedFilter === 'active')
-  // ) {
-  //   return true
-  // }
-  // return false
 }
 
 defineProps({

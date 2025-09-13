@@ -1,3 +1,3 @@
 <template>
-  <h3>Todo App</h3>
+  <h1 class="text-3xl mb-2">Todo App</h1>
 </template>
