@@ -1,11 +1,11 @@
 <template>
   <!-- a div with width and height of screen to center the main container -->
-  <div class="flex flex-col justify-center items-center h-screen w-screen">
+  <div class="bg-mint-green-lighter flex flex-col justify-center items-center h-screen w-screen">
     <!-- header comp -->
     <AppHeader />
     <!-- the main container, contains FilterTasks, inputField and todo list -->
     <main
-      class="flex flex-col justify-center items-center gap-4 border p-4 w-70 md:w-80 lg:w-96 xl:w-[32rem]"
+      class="bg-white flex flex-col justify-center items-center gap-4 border p-4 w-70 md:w-80 lg:w-96 xl:w-[32rem]"
     >
       <FilterTasks />
       <!-- contains input and todolist -->

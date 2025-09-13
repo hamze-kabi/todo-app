@@ -1,1 +1,13 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-mint-green: #c7ede4;
+  --color-mint-green-lighter: #d5fff3;
+  --color-rose-quartz: #af9ab2;
+  --color-dark-magenta: #820b8a;
+  --color-violet: #672a4e;
+}
+
+button {
+  @apply bg-violet;
+}
